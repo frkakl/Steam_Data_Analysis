@@ -12,7 +12,7 @@ df = pd.DataFrame.from_dict(json, orient='index')
 # get the rest of the pages
 for i in range(1, 999999999):
     response = requests.get("https://steamspy.com/api.php?request=all&page={}".format(i))
-    
+
     # check if the page is OK
     if response.status_code == 200:
         print("Page {} is OK".format(i))
@@ -27,6 +27,6 @@ for i in range(1, 999999999):
         print("Scrape stopped at page {}".format(i-1))
         break
 
-# export
+# export as csv
 df.to_csv('app_list.csv', index=False)
 
