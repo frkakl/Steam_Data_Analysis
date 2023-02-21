@@ -30,3 +30,4 @@ for i in range(1, 999999999):
 # export as csv
 df.to_csv('app_list.csv', index=False)
 
+#API_Source: https://steamspy.com/
